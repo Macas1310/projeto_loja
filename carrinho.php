@@ -1,24 +1,21 @@
 <?php
-    
 
-    try{
-        include 'conexao.php';
-        include 'menu.php';
+try {
+    include 'conexao.php';
+    include 'menu.php';
 
-        // $id = $_GET['id'];
+    // $id = $_GET['id'];
 
-  $sql =  "SELECT * FROM produtos ";  
+    $sql = "SELECT * FROM produtos WHERE id IN (3, 8)";
 
-  $stmt = $conn->prepare($sql);
+    $stmt = $conn->prepare($sql);
 
-  $stmt->execute();
+    $stmt->execute();
 
-  $dados = $stmt->fetchAll((PDO::FETCH_ASSOC));
-  
-  
-} catch (PDOException $err)  {
+    $dados = $stmt->fetchAll((PDO::FETCH_ASSOC));
 
- 
+} catch (PDOException $err) {
+
 }
 ?>
 
@@ -34,7 +31,7 @@
                         <h3><?php echo $item['nome']?></h3>
                         <p><?php echo $item['descricao']?></p>
                         <p class="preco"><?php echo $item['preco']?></p>
-                        <a href="produto.php?id=<?php echo $item ['id']?> "><button >Saiba Mais</button></a>
+                        <a href="?id=<?php echo $item ['id']?> "><button >Comprar</button></a>
                     </div>
                 <?php
                 };
