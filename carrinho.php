@@ -1,5 +1,14 @@
 <?php
 
+
+session_start();
+
+$_SESSION['carrinho'] = array();
+
+$_SESSION['carrinho']['id'] = 10;
+
+$ids = $_SESSION['carrinho']['id'];
+
 try {
     include 'conexao.php';
     include 'menu.php';
