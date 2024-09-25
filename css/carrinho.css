@@ -152,3 +152,8 @@ footer p {
 .credito-card{
     width: 100%;
 }
+
+.limpar-carrinho {
+    text-decoration: none;
+    background-color: #29806a;
+}
