@@ -1,159 +1,157 @@
-* {
+/* *{
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #1c1c1c;
+    color: #f3f3f3;
+}
+
+.centro{
+    text-align: center;
+}
+
+.direita{
+    text-align: right;
+}
+
+#container{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #2e2b5f;
+    
+}
+
+.img-carrinho{
+    width: 50px;
+}
+
+th{
+    text-align: left;
+    background-color: #1c1c1c;
+    padding: 5px;
+}
+
+table,th,td{
+    border: 1px solid #FFF;
+    border-collapse: collapse;
+}
+
+table{
+    width: 80%;
+    margin: 0 auto;
+} */
+
+
+
+
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
 }
 
-header {
-    background-color: #29806a;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-header h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-nav ul {
-    list-style: none;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-}
-
-main {
-    max-width: 1000px;
+#container {
+    max-width: 800px;
     margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-section.produtos {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-}
-
-.produto-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+h1.centro {
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    color: #2e2b5f;
 }
 
-.produto-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+#carrinho {
+    overflow-x: auto;
 }
 
-.produto-card img {
+table {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    border-collapse: collapse;
 }
 
-.produto-card h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-.produto-card p {
-    font-size: 1em;
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.produto-card .preco {
-    font-size: 1.2em;
-    color: #e74c3c;
-    margin-bottom: 15px;
-}
-
-.produto-card button {
-    background-color: #29806a;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-.produto-card button:hover {
-    background-color: #e74c3c;
-}
-
-footer {
+th {
     background-color: #29806a;
     color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 40px;
 }
 
-footer p {
-    font-size: 0.9em;
+tr:hover {
+    background-color: #f1f1f1;
 }
 
-
-.titulo{
-    margin: 0 auto;
+.img-carrinho {
+    width: 50px;
+    height: auto;
 }
 
-.escrito{
-    font-style: bold;
+.direita {
+    text-align: right;
+    font-weight: bold;
 }
 
-.produtos{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
+td:last-child {
+    font-weight: bold;
+    color: #28a745;
 }
 
-.imagem{
-    width: 35%;
-}
-.credito-card{
-    width: 100%;
+.limpar-carrinho{
+    padding: 10px;
+    border: none;
+    background: rgb(145, 35, 35);
+    color: #FFF;
+    border-radius: 4px;
 }
 
-.limpar-carrinho {
-    text-decoration: none;
-    background-color: #29806a;
+.voltar-carrinho{
+    padding: 10px;
+    border: none;
+    background: rgb(35, 96, 145);
+    color: #FFF;
+    border-radius: 4px;
 }
+
+.remover-produto {
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: transform 0.2s; /* Animação ao passar o mouse */
+}
+
+.remover-produto:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
+}
+
+.remover-produto i {
+    color: #ff4d4d; /* Cor do ícone */
+    transition: color 0.2s; /* Animação de mudança de cor */
+}
+
+.remover-produto:hover i {
+    color: #ff1a1a; /* Cor do ícone ao passar o mouse */
+}
+
+/* Adicionando um efeito de foco */
+.remover-produto:focus {
+    outline: none; /* Remove a borda de foco padrão */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Sombra ao redor do botão */
+}
+

@@ -1,5 +1,13 @@
 <?php
 
+session_start();
+  
+//verifica o tamanho do array do carrinho
+if(isset($_SESSION['carrinho'])){
+  $qtd_carrinho = count(array_unique($_SESSION['carrinho']));    
+}else{
+  $qtd_carrinho = 0;
+}
 
 try {
     include 'conexao.php';

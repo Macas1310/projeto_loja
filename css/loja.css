@@ -1,0 +1,33 @@
+.carrinho {
+    color: aliceblue;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    text-decoration: none;
+}
+
+.quantidade {
+    text-decoration: none;
+    position: absolute;
+    top: -5px; /* Ajuste a distância do topo conforme necessário */
+    right: -10px; /* Ajuste a distância da direita conforme necessário */
+    background-color: red; /* Cor de fundo para destaque */
+    color: white; /* Cor do texto */
+    border-radius: 50%; /* Faz um círculo */
+    padding: 2px 5px; /* Espaçamento interno */
+    font-size: 12px; /* Tamanho da fonte */
+    line-height: 1; /* Altura da linha para centralizar */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* header a{
+    text-decoration: none;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+} */
