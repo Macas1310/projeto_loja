@@ -1,0 +1,158 @@
+/* Reset de margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c; /* Fundo escuro, mantendo identidade do site */
+    color: #f3f3f3; /* Texto claro para contraste */
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2e2b5f; /* Roxo escuro, mantendo o estilo do site */
+    padding: 15px 20px;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 1.8em;
+    margin: 0;
+    text-align: center;
+}
+
+/* Container principal do formulário */
+.form-container {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #29806a; /* Roxo escuro, combinando com o site */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar o formulário */
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #f39c12; /* Laranja, mantendo a identidade visual */
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+/* Layout em grid para o formulário */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #f3f3f3;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #333;
+    background-color: #f9f9f9; /* Campo de input com fundo claro */
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #f39c12; /* Foco nos inputs com a cor laranja */
+    outline: none;
+}
+
+/* Botão de envio */
+.btn-submit {
+    grid-column: span 2;
+    padding: 15px;
+    background-color: #f39c12; /* Botão com a cor laranja */
+    color: #fff; /* Texto escuro para contraste */
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #e08e0b; /* Cor mais escura no hover */
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    background-color: #cf7a06; /* Cor mais escura ao clicar */
+    transform: translateY(0);
+}
+
+/* Esconda o input real */
+.image-upload {
+    display: none;
+}
+
+/* Crie um botão personalizado */
+.image-upload-label {
+    display: inline-block;
+    padding: 12px;
+    background-color: #f9f9f9; /* Cor similar aos inputs */
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Borda igual a dos inputs */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    width: 100%; /* Largura completa */
+}
+
+.image-upload-label:hover {
+    background-color: #f39c12; /* Cor laranja ao passar o mouse */
+    border-color: #f39c12;
+    color: #fff; /* Texto branco no hover */
+}
+
+.image-upload-icon {
+    margin-right: 8px;
+}
+
+/* Estilo para a pré-visualização da imagem */
+.preview-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.image-preview {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-submit {
+        grid-column: 1;
+    }
+}
+

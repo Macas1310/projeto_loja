@@ -14,10 +14,20 @@ try {
     include 'conexao.php';
     include 'menu.php';
 
-    // $id = $_GET['id'];
+    $sql = "SELECT * FROM produtos"; 
 
-    $sql = "SELECT * FROM produtos ";
+    if (isset($_GET['busca'])) {
+        $busca = $_GET['busca'];
+        $sql = "SELECT * FROM produtos WHERE nome LIKE '%$busca%'";
+    }
 
+    // Verifica se há uma categoria selecionada
+    if (isset($_GET['categoria']) && !empty(trim($_GET['categoria']))) {
+        $categoria = trim($_GET['categoria']);
+        $sql .= " AND categoria = :categoria";
+        $stmt->bindValue(':categoria', $categoria);
+    }
+    
     $stmt = $conn->prepare($sql);
 
     $stmt->execute();
@@ -31,10 +41,17 @@ try {
 }
 ?>
 
+
+
+
 <body>
        
     <main>
-
+    <form action="index.php" method="GET" class="d-flex">
+        <input name="busca" class="form-control me-2" type="search" placeholder="Buscar produtos..." aria-label="Search" 
+        value="<?php echo isset($_GET['busca']) ? htmlspecialchars($_GET['busca']) : ''; ?>">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
         <section class="produtos">
             <?php foreach ($dados as $item) { ?>
 
