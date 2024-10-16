@@ -98,7 +98,7 @@ include "menu.php";
                 <tr>
                     <td><?php echo $produto['id']?></td>
                     <td><img class="img-carrinho" src="img/<?php echo $produto['imagem']?>" alt="" srcset=""></td>
-                    <td><?php echo $produto['nome']?></td>
+                    <td><div class=""><a class="produto-carrinho" href="produto.php?id=<?php echo $produto['id'] ?> "><?php echo $produto['nome']?></a></div></td>
                     <td><?php echo $quantidade?></td>
                     <td><?php echo $produto['preco']?></td>
                     <td><?php echo $produto['preco'] * $quantidade?></td>
