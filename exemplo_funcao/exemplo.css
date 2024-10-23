@@ -1,0 +1,35 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    background: #fafafa;
+}
+
+table, tr, td{
+    width: 500px;
+    border: 1px solid #160cca;
+    border-collapse: collapse;
+    padding: 5px;
+
+}
+
+table th {
+    background: #2e2b5f;
+    color: #FFF;
+    text-align: left;
+}
+
+.btn-alterar {
+    padding: 5px;
+    background: rgb(12, 45, 105);
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-deletar{
+    padding: 5px;
+    background: rgb(105, 12, 12);
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+}
