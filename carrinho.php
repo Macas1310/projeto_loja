@@ -128,7 +128,6 @@ include "menu.php";
                 <button class="limpar-carrinho" type="submit" name="limparCarrinho">Limpar Carrinho</button>
             </form>
 
-
             <a href="index.php">
                 <button class="voltar-carrinho" type="button" name="limparCarrinho">Voltar</button>
             </a>
